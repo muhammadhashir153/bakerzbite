@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Libraries/jQuery/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./Libraries/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Libraries/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Libraries/font-awesome/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <script src="functions.js"></script>
+    <!---owl carrousel CSS---->
+    <link rel="stylesheet" href="./Libraries/owl carousel/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Libraries/owl carousel/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <!---owl Carrousel JS-->
+    <script src="./Libraries/owl carousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!---owl carrousel-->
+    <title>Bakerz Bite</title>
+    <script>
+        
+        //
+        //back to top
+        //
+        $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+            $('#back-to-top').fadeIn();
+            } else {
+            $('#back-to-top').fadeOut();
+            }
+        });
+        
+        $('#back-to-top').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 500);
+        });
+        });
+    </script>
+
+</head>
+<body>
+    <!---popups-->
+    <!---order online form-->
+    <div class="container-fluid" id="form-order">
+        <p class="text-end pt-5 px-5 h3"><span id="order-close" class="fas fa-close"></span></p>
+        <iframe id="frm-ordr" src="order.html"></iframe>
+    </div>
+
+    <!--Header----->
+    <header id="header" class="container-fluid">
+        <div id="navigation" >
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <div id="logo" class="navbar-brand">
+                            <a href="index.html"><img src="./Images/logo.png" height="60px"></a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#basicExampleNav"
+                                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse collapse smooth-scroll justify-content-end" id="basicExampleNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="About.html" class="nav-link">About Us</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>                           
+                            <li class="nav-item"><a href="#merchandise" class="nav-link"><i class="fa fa-shirt"></i> Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>   
+        </div>
+        <script>
+            $(document).ready(function () {
+            $('.dropdown-hover').hover(function () {
+                $(this).addClass('show');
+                $(this).find('.dropdown-menu').addClass('show');
+            }, function () {
+                $(this).removeClass('show');
+                $(this).find('.dropdown-menu').removeClass('show');
+            });
+        });
+        </script>
+    </header>
+
+    <!--Main Section-->
+    <section id="hero-home" class="container-fluid p-0">
+                <div id="hero-car" class="carousel slide" data-bs-ride="carousel" >
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./Images/sliders/angelo-pantazis-2-U0A2tNYhM-unsplash.jpg" alt="..." class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Images/sliders/karlis-dambrans-oLHk_WLupSc-unsplash.jpg" alt="..."  class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Images/sliders/mae-mu-m9pzwmxm2rk-unsplash.jpg" class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Images/sliders/mink-mingle-qZ5lPCPvdXE-unsplash.jpg" class="d-block">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./Images/sliders/sigmund-p9pCxNIX4lk-unsplash.jpg" class="d-block">
+                        </div>
+                    </div>
+                </div>
+                <div id="heading" class="container-fluid d-flex justify-content-center align-items-center p-0 m-0">
+                    <div>
+                        <h1 class="display-1 text-center">Bakerz Bite</h1>
+                        <p class="h3 text-center">Where smiles are served daily</p>
+                    </div>
+                </div>
+    </section>
+
+    <!---Best Bakery Section-->
+    <section id="sec-home-1" class="container-fluid row">
+        <div class="col-sm-6 d-flex justify-content-start align-items-center">
+            <div>
+                <h1 class="display-4" style="border-left: 2px solid black; padding-left: 5px;">The best Bakery<br>in Pakistan</h1>
+                <p class="h5">Since its launch, “Bakerz Bite” has developed into a reputable bakery & café, 
+                    specializing in baked goods, passionately made from the finest ingredients.</p>
+                    <button id="order-open" class="dark">Order Online</button>
+                    <a href="About.html#abt-sec-3"><button class="white">Location</button></a>
+                    <script>
+                        $(document).ready(function(){
+                            $("#order-open").click(function(){
+                                $("#form-order").addClass('popup');
+                                $('header').hide();
+                                $('body').css({
+                                    overflowY: 'hidden'
+                                });
+                            });
+                            $("#order-close").click(function(){
+                                $("#form-order").removeClass('popup');
+                                $('header').show();
+                                $('body').css({
+                                    overflowY:'visible'
+                                });
+                            });
+                        });
+                    </script>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <img src="./Images/e2df5289-1d13-48f2-b331-fcec2c8d23ce.png">
+        </div>
+        <script>
+            $(document).ready(function() {
+            $(window).scroll(function() {
+                var scrollPosition = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var elementPosition = $('#sec-home-1').offset().top;
+                    if (scrollPosition > (elementPosition - windowHeight) +100) {
+                            $('#sec-home-1').addClass('animate');
+                    }else{
+                        $('#sec-home-1').removeClass('animate');
+                    }
+                });
+            });
+        </script>
+    </section>
+
+    <!---Cards section-->
+    <section id="cards" class="container-fluid">
+        <div class="row">
+            <div id="card-1" class="col-md-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <h4>Order Online</h4>
+                    <p><b>Call: </b><a href="tel: 923161234567">  (92) 316 123 4567 <i class="fa-solid fa-arrow-right"></i></a></p>
+                    <p><b>E-Mail: </b><a href="mailto: book@bakerzbite.com">  book@bakerzbite.com <i class="fa-solid fa-arrow-right"></i></a></p>
+                    <p><b>Form: </b><a href="#">  Reservate now <i class="fa-solid fa-arrow-right"></i></a></p>
+                </div>
+            </div>
+            <div id="card-1" class="col-md-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <h4>Locations</h4>
+                    <p>42-M, P.E.C.H.S. Dr. Mehmood Hussain Road, Karachi</p>
+                    <p>Al-Rehman Building I.I.Chundrigar Road, Karachi</p>
+                </div>
+            </div>
+            <div id="card-1" class="col-md-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <h4>Open Hours</h4>
+                    <p><b>Mon-Fri: </b> 9 AM -  8 PM</p>
+                    <p><b>Saturday: </b>10 AM -  11 PM</p>
+                    <p><b>Sunday: </b>10 AM - 10 AM</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollPosition = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var elementPosition = $("#cards").offset().top;
+                if (scrollPosition>(elementPosition - windowHeight)) {
+                    $("#cards").addClass('slide');
+                }else{
+                    $("#cards").removeClass('slide');
+                }
+            });
+        });
+        </script>
+    </section>
+
+    <!---order online section--->
+    <section id="sec-home-2" class="container-fluid row" >
+        <div id="sec-2-img" class="col-md-6">
+            <img src="./Images/mohamed-hassouna-N4gtuEZ5gWc-unsplash.jpg" alt="...">
+        </div>
+        <div id="sec-2-content" class="col-md-6 d-flex justify-content-center align-items-center">
+            <div>
+                <h1 class="display-4" style="border-left: 2px solid black; padding-left: 5px;">Come or order online</h1>
+                <p class="h5">Bakerz Bite offers a wide range of baked goods made fresh in-store every day. The bakery chain offers more than 300 different kinds of baked goods,
+                     including artisan pastries, gourmet cakes and desserts, and handcrafted beverages.</p>
+                <a href="menu-popup.html"><button class="dark" id="menu-btn">Browse Menu</button></a>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollPosition = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var elementPosition = $("#sec-home-2").offset().top;
+                if (scrollPosition>(elementPosition - windowHeight)) {
+                    $("#sec-home-2").addClass('animate-in');
+                }else{
+                    $("#sec-home-2").removeClass('animate-in');
+                }
+            });
+        });
+        </script>
+    </section>
+
+    <!--Video Section-->
+    <section id="home-video" class="container-fluid p-0">
+        <div id="video">
+            <video src="./videos/pexels-anna-nekrashevich-7550990-3840x2160-30fps.mp4" autoplay="true" loop muted></video>
+        </div>
+        <div id="video-content" class="d-flex justify-content-center align-items-center">
+                <h1 class="display-4">Enjoy a bakery<br>experience like never before.</h1>
+        </div>
+        <script>
+            $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollPosition = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var elementPosition = $("#home-video").offset().top;
+                if (scrollPosition>(elementPosition - windowHeight)) {
+                    $("#video").addClass('animation');
+                }else{
+                    $("#video").removeClass('animation');
+                }
+            });
+        });
+        </script>
+    </section>
+
+    <!---Menu section-->
+    <section id="menu-caro" class="container-fluid p-0 pb-5">
+        <div id="menu-content" class="row container">
+            <div class="col-6 display-4 my-5 pt-5 text-center">Our Menu </div>
+            <div class="col-6 display-4 my-5 pt-5 text-end">
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="slider-next"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="menu-slider" class="menu-slider owl-carousel container">
+            <a href="menu-popup.html#crois" target="_blank"><!--Croissants -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/sergio-arze-eH9_kZ92LWQ-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Croissants</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Butter, Water, Milk, Sugar, Salt, Instant yeast, Egg (for egg wash), 
+                    Filling options (e.g., chocolate, almond paste, ham, cheese)</p>
+                    <p class="p-3"><b>Price: </b>50 PKR to 150 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#cupcke" target="_blank"><!-- Cupcakes -->
+                <div class="menu-card container">
+                <img class="p-3" src="./Images/menu/michael-chiara-BLy3LMYMVvE-unsplash.jpg" alt="....">
+                <h1 class="p-3">Cupcakes</h1>
+                <p class="p-3"><b>Ingredients: </b>All-purpose flour, Butter or Oil, Milk or Butter Milk, Sugar, Salt, Vanilla Extract, 
+                Optional flavorings (e.g., lemon zest, cocoa powder, cinnamon), </p>
+                <p class="p-3"><b>Price: </b>50 PKR to 200 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#cakes" target="_blank"><!-- Cakes -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/ulysse-pointcheval-1WmlAiYgnoI-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Cakes</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Sugar, Butter or oil, Eggs, Baking powder, 
+                    Milk or buttermilk, flavor extracts depending on the desired flavor, Salt</p>
+                    <p class="p-3"><b>Price: </b>500 PKR to 7,000 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#pastries" target="_blank"><!-- pastries -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/geri-chapple-fXdoHjQ2Pyg-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Pastries</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Butter, Cold water, Salt,
+                    Powdered sugar, Water or milk, Vanilla extract, Lemon juice or zest, Egg wash (for shiny finish)
+                    </p>
+                    <p class="p-3"><b>Price: </b>50 PKR to 200 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#pies" target="_blank"><!-- Pies -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/kelcie-herald-K_GkRKJJE-I-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Pies</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Butter or shortening, Cold water, 
+                    Salt, Sugar (optional), Fruit (e.g., apples, berries, peaches, cherries), Sugar</p>
+                    <p class="p-3"><b>Price: </b>400 PKR to 3,500 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#cookies" target="_blank"><!-- Cookies -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/conor-brown-H1uISjlRXJE-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Cookies</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Butter or margarine, Granulated sugar, 
+                    Eggs, Baking powder, Vanilla extract, Salt, Sprinkles, Melted chocolate</p>
+                    <p class="p-3"><b>Price: </b>20 PKR to 2,500 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#doughnuts" target="_blank"><!--Doughnuts -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/anna-sullivan--tR4fnNJW2A-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Doughnuts</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Sugar, Powdered sugar glaze, 
+                    Chocolate glaze, Vanilla glaze, Cinnamon sugar coating, Sprinkles or colored sugar</p>
+                    <p class="p-3"><b>Price: </b>30 PKR to 800 PKR</p>
+                </div>
+            </a>
+            <a href="menu-popup.html#bread" target="_blank"><!--Breads -->
+                <div class="menu-card container">
+                    <img class="p-3" src="./Images/menu/nha-van-9bxJoydEv4U-unsplash.jpg" alt="....">
+                    <h1 class="p-3">Breads</h1>
+                    <p class="p-3"><b>Ingredients: </b>All-purpose flour, Sugar, Butter or oil, Eggs, Baking powder, 
+                    Milk or buttermilk, flavor extracts depending on the desired flavor, Salt</p>
+                    <p class="p-3"><b>Price: </b>5 PKR to 350 PKR</p>
+                </div>
+            </a>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#menu-slider').owlCarousel({
+                    items: 4,
+                    loop: true,
+                    margin: 10,
+                    nav: false,
+                    dots: false,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        768: {
+                            items: 2
+                        },
+                        992: {
+                            items: 3
+                        },
+                        1140:{
+                            items: 4
+                        }
+                    }
+                });
+                //
+                //ends
+
+            // Custom navigation
+            $('#menu-content .slider-prev').click(function() {
+                $('#menu-slider').trigger('prev.owl.carousel');
+                });
+
+            $('#menu-content .slider-next').click(function() {
+                $('#menu-slider').trigger('next.owl.carousel');
+                });
+            });
+        </script>
+    </section>
+
+    <!---Testimonials Section--->
+    <section id="sec-home-3" class="container-fluid p-0">
+        <div>
+            <div class="container">
+                <h1 class="display-4 text-bold text-center py-5">We believe and are dedicated<br>in delivering premium quality products.</h1>
+            </div>
+            <div id="review-slider" class="owl-carousel container">
+                <div class="review-card p-5 container"><!---1st review-->
+                    <div class="rev-name">
+                        <h3>John Smith</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"I had a fantastic experience with Bakerz Bite. The customer service was exceptional, and the food was absolutely delicious. 
+                            The menu offered a great variety of options, and everything I tried was fresh and flavorful. I highly recommend Bakerz Bite 
+                            for anyone looking for a satisfying and enjoyable dining experience."</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!---2nd review-->
+                    <div class="rev-name">
+                        <h3>Sarah Johnson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star blank"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"Bakerz Bite is a hidden gem! The atmosphere is cozy and inviting, and the staff is friendly and attentive.
+                             The menu has a good selection of both vegetarian and non-vegetarian dishes. I particularly loved their signature dish.
+                              The only reason I didn't give it 5 stars is because the portion sizes were a bit small for the price."</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!--3rd review-->
+                    <div class="rev-name">
+                        <h3>David Thompson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"Bakerz Bite exceeded my expectations. The food was absolutely delicious, and the presentation
+                             was top-notch. The staff was knowledgeable and provided excellent recommendations. The prices were 
+                             reasonable for the quality of food and service. I will definitely be returning to Bakerz Bite and recommending
+                              it to my friends and family"</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!---4th review-->
+                    <div class="rev-name">
+                        <h3>Emily Wilson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star blank"></i>
+                        <i title="excellent" class="fas fa-star blank"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"My experience at Bakerz Bite was average. While the food tasted good, the service
+                             was slow and the staff seemed overwhelmed. The prices were a bit high considering the portion 
+                             sizes. However, the ambiance of the restaurant was pleasant, and the menu had a decent variety
+                              of options. It's an okay place to dine if you're not in a rush."</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!---fifth review-->
+                    <div class="rev-name">
+                        <h3>Michael Anderson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"Bakerz Bite is my go-to place for a quick and delicious meal. 
+                            The menu is diverse, offering something for everyone. The staff is friendly 
+                            and efficient, and the food is always fresh and flavorful. I've never been disappointed
+                             with my experience at Bakerz Bite, and I highly recommend it to anyone looking for
+                              great food and excellent service."</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls display-6 text-center my-3 py-5">
+                <button style="color: #0D0D0D;" class="slider-prev"><i class="fas fa-arrow-left"></i></button>
+                <button style="color: #0D0D0D;" class="slider-next"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#review-slider').owlCarousel({
+                    items: 2,
+                    loop: true,
+                    margin: 10,
+                    nav: false,
+                    dots: false,
+                    responsive: {
+                        0:{
+                            items: 1
+                        },
+                        768: {
+                            items: 1
+                        },
+                        992: {
+                            items: 2
+                        }
+                    }
+                });
+                //
+                //ends
+
+            // Custom navigation
+            $('#sec-home-3 .slider-prev').click(function() {
+                $('#review-slider').trigger('prev.owl.carousel');
+                });
+
+            $('#sec-home-3 .slider-next').click(function() {
+                $('#review-slider').trigger('next.owl.carousel');
+                });
+            });
+        </script>
+    </section>
+
+    <!---Merchandise Section---->
+    <section id="merchandise" class="container-fluid p-0 mb-5">
+        <div id="merch-content" class="container">
+            <div class="display-4 my-5 pt-5 text-center text-white">Our Merchandise</div>
+        </div>
+        <div id="merch-gallery" class="container p-5 text-center">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row my-3">
+                        <div id="merch-img-1" class="col-6  merch-item">
+                            <img src="./mockups/mask.jpg" alt="..">
+                            <div id="merch-cont-1" class="p-3">
+                                <h1 class="h4">Keep your Fever to yourself</h1>
+                                <p>Wear a mask and die alone</p>
+                                <p>You're Not a Death Angel!</p>
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+                                    $("#merch-img-1").mouseenter(function(){
+                                        $("#merch-cont-1").slideDown();
+                                    });
+                                    $("#merch-img-1").mouseleave(function(){
+                                        $("#merch-cont-1").slideUp();
+                                    });
+                                })
+                            </script>
+                        </div>
+                        <div id="merch-img-2" class="col-6  merch-item">
+                            <img src="./mockups/shirts.jpg" alt="..">
+                            <div id="merch-cont-2" class="p-3">
+                                <h1 class="h4">Sometimes</h1>
+                                <p>Picture says it all</p>
+                            </div>
+                            <script>
+                                $(document).ready(function(){
+                                    $("#merch-img-2").mouseenter(function(){
+                                        $("#merch-cont-2").slideDown();
+                                    });
+                                    $("#merch-img-2").mouseleave(function(){
+                                        $("#merch-cont-2").slideUp();
+                                    });
+                                })
+                            </script>
+                        </div>
+                    </div>
+                    <div id="merch-img-3" class="container-fluid my-3 mx-0 px-0">
+                        <img src="./mockups/mugs.jpg" alt="">
+                        <div id="merch-cont-3" class="p-3">
+                            <h1 class="display-6">Hello Friends!</h1>
+                            <p class="h4">Chae Peelo</p>
+                            <p class="h4">Papay Khalo</p>
+                        </div>
+                        <script>
+                            $(document).ready(function(){
+                                $("#merch-img-3").mouseenter(function(){
+                                    $("#merch-cont-3").slideDown();
+                                });
+                                $("#merch-img-3").mouseleave(function(){
+                                    $("#merch-cont-3").slideUp();
+                                });
+                            })
+                        </script>
+                    </div>
+                </div>
+                <div id="merch-img-4" class="col-6">
+                    <img src="./mockups/mobile.jpg" alt="">
+                    <div id="merch-cont-4" class="p-3">
+                        <h1 class="display-6">Lele Yarr</h1>
+                        <p class="h4">Bhai nahi hai?</p>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#merch-img-4").mouseenter(function(){
+                                $("#merch-cont-4").slideDown();
+                            });
+                            $("#merch-img-4").mouseleave(function(){
+                                $("#merch-cont-4").slideUp();
+                            });
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="container p-5 my-5">
+        <div class="row text-center">
+            <p class="h2">
+                <i class="fa fa-copyright"></i> Copyright 2023 | All rights reserved
+            </p>
+        </div>
+
+    </footer>
+
+
+    <!---back to top button-->
+    <div id="back-to-top"><i class="fa-solid fa-arrow-up"></i></div>
+
+
+</body>
+</html>

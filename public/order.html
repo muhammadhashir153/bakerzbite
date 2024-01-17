@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Libraries/jQuery/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./Libraries/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Libraries/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Libraries/font-awesome/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <script src="functions.js"></script>
+    
+    <title>Order Online</title>
+
+</head>
+<body style="background-color: rgba(255, 255, 255, 0.8); overflow-x: scroll;">
+    <div class="d-flex justify-content-center align-items-center">
+        <form id="order-online" class="container mt-5">
+
+            <table>
+                        <tr>
+                            <td colspan="4 d-flex justify-content-center align-items-center">
+                                <div id="logo">
+                                    <img src="./Images/logo.png" alt="" height="80px">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr><!---Selection option-->
+                            <td colspan="4">
+                                <select name="items" id="item" onchange="showItem()"><!--Main Select-->
+                                    <option value="-1">Select Item(s)</option>
+                                    <option value="Croissants">Croissants</option>
+                                    <option value="Cupcakes">Cupcakes</option>
+                                    <option value="Cakes">Cakes</option>
+                                    <option value="pastries">pastries</option>
+                                    <option value="Pies">Pies</option>
+                                    <option value="Cookies">Cookies</option>
+                                    <option value="Doughnuts">Doughnuts</option>
+                                    <option value="Breads">Breads</option>
+                                </select>
+                                <select name="Croissants" id="croissant" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Croissants</option>
+                                    <option value="Plain Croissants">Plain Croissants</option>
+                                    <option value="Chocolate Croissants">Chocolate Croissants</option>
+                                    <option value="Almond Croissants">Almond Croissants</option>
+                                    <option value="Ham and Cheese Croissants">Ham and Cheese Croissants</option>
+                                </select>
+                                <select name="Cupcakes" id="cupcake" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Cupcakes</option>
+                                    <option value="Vanilla Cupcake">Vanilla Cupcake</option>
+                                    <option value="Chocolate Cupcake">Chocolate Cupcake</option>
+                                    <option value="Red Velvet Cupcake">Red Velvet Cupcake</option>
+                                    <option value="Lemon Cupcake">Lemon Cupcake</option>
+                                </select>
+                                <select name="Cakes" id="cakes" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Cakes</option>
+                                    <option value="Carrot Cake">Carrot Cake</option>
+                                    <option value="Strawberry Shortcake">Strawberry Shortcake</option>
+                                    <option value="Chocolate Cake">Chocolate Cake</option>
+                                    <option value="Black Forest Cake">Black Forest Cake</option>
+                                </select>
+                                <select name="pastries" id="pastrie" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Pastries</option>
+                                    <option value="Apple Turnover">Apple Turnover</option>
+                                    <option value="Fruit Danish">Fruit Danish</option>
+                                    <option value="Cinnamon Roll">Cinnamon Roll</option>
+                                    <option value="Bear Claw">Bear Claw</option>
+                                </select>
+                                <select name="Pies" id="pie" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Pies</option>
+                                    <option value="Apple Pie">Apple Pie</option>
+                                    <option value="Cherry Pie">Cherry Pie</option>
+                                    <option value="Blueberry Pie">Blueberry Pie</option>
+                                    <option value="Pecan Pie">Pecan Pie</option>
+                                </select>
+                                <select name="Cookies" id="cookie" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Cookies</option>
+                                    <option value="Chocolate Chip Cookie">Chocolate Chip Cookie</option>
+                                    <option value="Oatmeal Raisin Cookie">Oatmeal Raisin Cookie</option>
+                                    <option value="Sugar Cookie">Sugar Cookie</option>
+                                    <option value="Peanut Butter Cookie">Peanut Butter Cookie</option>
+                                </select>
+                                <select name="Doughnuts" id="doughnut" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Doughnuts</option>
+                                    <option value="Glazed Doughnut">Glazed Doughnut</option>
+                                    <option value="Chocolate Frosted Doughnut">Chocolate Frosted Doughnut</option>
+                                    <option value="Jelly-Filled Doughnut">Jelly-Filled Doughnut</option>
+                                    <option value="Maple Bacon Doughnut">Maple Bacon Doughnut</option>
+                                </select>
+                                <select name="Breads" id="bread" style="display: none;" onchange="childItem()">
+                                    <option value="-1">Select Breads</option>
+                                    <option value="Baguette">Baguette</option>
+                                    <option value="Sourdough Bread">Sourdough Bread</option>
+                                    <option value="Whole Wheat Bread">Whole Wheat Bread</option>
+                                    <option value="Rye Bread">Rye Bread</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <b>Category :</b> <span id="item-name"></span><br>
+                                <b>Item Name :</b> <span id="selected-item"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                Your Name: <br><input type="text" required placeholder="eg. john doe">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                Mobile Number: <br><input type="tel" placeholder="eg. (92) 123 456 7890">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                Address: <br><input type="text" placeholder="123 Street, Phase 7">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                Order Collection Day: <br><input type="date">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="text-end">
+                                <button class="dark"><input id="sub-btn" type="submit" value="Submit"></button>
+                            </td>
+                        </tr>
+            </table>
+        </form>
+        <script>
+            var croissantSelect = document.getElementById("croissant");
+            var cupcakeSelect = document.getElementById("cupcake");
+            var cakesSelect = document.getElementById("cakes");
+            var pastrieSelect = document.getElementById("pastrie");
+            var pieSelect = document.getElementById("pie");
+            var cookieSelect = document.getElementById("cookie");
+            var doughSelect = document.getElementById("doughnut");
+            var breadSelect = document.getElementById("bread");
+
+            //for replacing items....
+            function showItem() {
+                var item = document.getElementById("item").value;
+                document.getElementById("item-name").innerHTML = item;
+
+                if (item === "Croissants") {
+                    croissantSelect.style.display = 'inline';
+                } else{
+                    croissantSelect.style.display = 'none';
+                }
+                
+                if (item === "Cupcakes") {
+                    cupcakeSelect.style.display = 'inline';
+                }else{
+                    cupcakeSelect.style.display = 'none';
+                }
+
+                if (item === "Cakes") {
+                    cakesSelect.style.display = 'inline';
+                } else {
+                    cakesSelect.style.display = 'none'; 
+                }
+
+                if (item === "pastries") {
+                    pastrieSelect.style.display = 'inline';
+                } else {
+                    pastrieSelect.style.display = 'none'; 
+                }
+
+                if (item === "Pies") {
+                    pieSelect.style.display = 'inline';
+                } else {
+                    pieSelect.style.display = 'none'; 
+                }
+
+                if (item === "Cookies") {
+                    cookieSelect.style.display = 'inline';
+                } else {
+                    cookieSelect.style.display = 'none'; 
+                }
+
+                if (item === "Doughnuts") {
+                    doughSelect.style.display = 'inline';
+                } else {
+                    doughSelect.style.display = 'none'; 
+                }
+
+                if (item === "Breads") {
+                    breadSelect.style.display = 'inline';
+                } else {
+                    breadSelect.style.display = 'none'; 
+                }
+            }
+        
+            function childItem() {
+            var selectedItem = document.getElementById("selected-item");
+            var item = document.getElementById("item").value;
+
+            switch (item) {
+                case "Croissants": // Croissants
+                    selectedItem.innerHTML = document.getElementById("croissant").value;
+                    break;
+                case "Cupcakes": // Cupcakes
+                    selectedItem.innerHTML = document.getElementById("cupcake").value;
+                    break;
+                case "Cakes": // Cakes
+                    selectedItem.innerHTML = document.getElementById("cakes").value;
+                    break;
+                case "pastries": // Pastries
+                    selectedItem.innerHTML = document.getElementById("pastrie").value;
+                    break;
+                case "Pies": // Pies
+                    selectedItem.innerHTML = document.getElementById("pie").value;
+                    break;
+                case "Cookies": // Cookies
+                    selectedItem.innerHTML = document.getElementById("cookie").value;
+                    break;
+                case "Doughnuts": // Doughnuts
+                    selectedItem.innerHTML = document.getElementById("doughnut").value;
+                    break;
+                case "Breads": // Breads
+                    selectedItem.innerHTML = document.getElementById("bread").value;
+                    break;
+                default:
+                    selectedItem.value = "";
+                    break;
+            }
+        }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Libraries/jQuery/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./Libraries/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Libraries/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Libraries/font-awesome/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <script src="functions.js"></script>
+    <title>Menu</title>
+</head>
+<body>
+    <header id="header" class="container-fluid">
+        <div id="navigation" >
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <div id="logo" class="navbar-brand">
+                            <img src="./Images/logo.png" height="60px">
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#basicExampleNav"
+                                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse collapse smooth-scroll justify-content-end" id="basicExampleNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item dropdown dropdown-hover">
+                                <a href="#" class="nav-link dropdown-toggle" id="hoverDropdown" role="button" data-bs-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">Products</a>
+                                <ul class="dropdown-menu" aria-labelledby="hoverDropdown">
+                                    <li><a href="#" class="dropdown-item"><i class="fa fa-cake"></i> Cakes</a></li>
+                                    <li><a href="#" class="dropdown-item"><i class="fa fa-ice-cream"></i> Ice-Cream</a></li>
+                                    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-cake"></i> Cakes</a></li>
+                                </ul>
+                            </li>                            
+                            <li class="nav-item"><a href="#" class="nav-link"><i class="fa fa-shirt"></i> Merchandise</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>   
+        </div>
+        <script>
+            $(document).ready(function () {
+            $('.dropdown-hover').hover(function () {
+                $(this).addClass('show');
+                $(this).find('.dropdown-menu').addClass('show');
+            }, function () {
+                $(this).removeClass('show');
+                $(this).find('.dropdown-menu').removeClass('show');
+            });
+        });
+        </script>
+    </header>
+    <section id="menupage" class="container py-5 mt-5">
+        <div class="row">
+            <div class="col-sm-4 menu-item">
+                <div  id="crois-btn" class="container p-3 my-3">
+                    <h1 class="display-6">Croissants <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/sergio-arze-eH9_kZ92LWQ-unsplash.jpg">
+                </div>
+                <div id="cup-btn" class="container p-3 my-3">
+                    <h1 class="display-6">Cupcakes <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/michael-chiara-BLy3LMYMVvE-unsplash.jpg" alt="">
+                </div>
+                <div class="container p-3 my-3" id="brd-btn">
+                    <h1 class="display-6">Breads <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/nha-van-9bxJoydEv4U-unsplash.jpg" alt="">
+                </div>
+                <div id="dou-btn" class="container p-3 my-3">
+                    <h1 class="display-6">Doughnuts <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/anna-sullivan--tR4fnNJW2A-unsplash.jpg" alt="">
+                </div>
+                <div class="container p-3 my-3">
+                    <h1 class="display-6">Pies <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/kelcie-herald-K_GkRKJJE-I-unsplash.jpg" alt="">
+                </div>
+                <div class="container p-3 my-3">
+                    <h1 class="display-6">Cakes <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/ulysse-pointcheval-1WmlAiYgnoI-unsplash.jpg" alt="">
+                </div>
+                <div class="container p-3 my-3">
+                    <h1 class="display-6">Pastries <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/geri-chapple-fXdoHjQ2Pyg-unsplash.jpg" alt="">
+                </div>
+                <div class="container p-3 my-3">
+                    <h1 class="display-6">Cookies <i class="fas fa-arrow-right"></i></h1>
+                    <img src="./Images/menu/conor-brown-H1uISjlRXJE-unsplash.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-sm-8 sub-item">
+                <div id="crois" class="row container-fluid">
+                    <h1 class="display-2  text-center">Croissants</h1>
+                    <div class="col-sm-6 item"><!--plain-->
+                        <h1 class="display-6">Plain Croissant</h1>
+                        <img src="./Images/menu/Croissants/Plain.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 150 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr"><!--plain-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Flour: All-purpose flour or bread flour is commonly used.</li>
+                            <li>Butter: High-quality unsalted butter is essential for the flaky layers.</li>
+                            <li>Water: Cold water is used to hydrate the dough.</li>
+                            <li>Milk: Some recipes may include milk for added richness and flavor.</li>
+                            <li>Sugar: A small amount of sugar may be added for a touch of sweetness.</li>
+                            <li>Salt: Salt is used to enhance the flavor of the croissant dough.</li>
+                            <li>Yeast: Active dry yeast or instant yeast is used as a leavening agent.</li>
+                            <li>Egg: A beaten egg may be used for glazing the croissants before baking.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Chocolate-->
+                        <h1 class="display-6">Chocolate Croissant</h1>
+                        <img src="./Images/menu/Croissants/chocolate.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 180 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Chocolate-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Dark Chocolate: High-quality dark chocolate bars or chocolate batons are 
+                                traditionally used. The chocolate is typically cut into thin sticks or batons 
+                                that are placed inside the croissant.</li>
+                            <li>Egg Wash: A beaten egg mixed with a little milk or water is used
+                                 to give the croissant a shiny and golden crust.</li>
+                            <li>Powdered Sugar: It can be sprinkled on top of the baked croissants for decoration.</li>
+                            <li>Vanilla Extract: A small amount of vanilla extract can be added to the dough for extra flavor.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Almond-->
+                        <h1 class="display-6">Almond Croissant</h1>
+                        <img src="./Images/menu/Croissants/Almond.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 220 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Almond-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Croissant Dough: Use the same ingredients as mentioned earlier for the plain croissant dough.</li>
+                            <li>Almond Filling:
+                                <ul style="list-style-type: square;">
+                                    <li>Almond Flour: Finely ground blanched almonds or almond flour.</li>
+                                    <li>Butter: Unsalted butter, softened.</li>
+                                    <li>Powdered Sugar: Adds sweetness to the filling.</li>
+                                    <li>Almond Extract: A small amount of almond extract enhances the almond flavor.</li>
+                                    <li>Egg: A beaten egg is used to bind the filling together.</li>
+                                </ul>
+                            </li>
+                            <li>Sliced Almonds: Used to sprinkle on top of the croissants for added crunch and visual appeal.</li>
+                            <li>Powdered Sugar: Can be dusted on top of the baked croissants for decoration.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Ham and Cheese-->
+                        <h1 class="display-6">Ham and Cheese Croissant</h1>
+                        <img src="./Images/menu/Croissants/cheese.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 300 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---ham and cheese-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Croissant Dough: Use the same ingredients as mentioned earlier for the plain croissant dough.</li>
+                            <li>Ham: Thinly sliced ham, such as cooked ham or deli ham.</li>
+                            <li>Cheese: A variety of cheese can be used, such as Swiss, cheddar,
+                                 or Gruyere. Choose a cheese that melts well and complements the ham.</li>
+                            <li>Dijon Mustard (optional): Dijon mustard can be spread on the croissant for an extra tangy flavor.</li>
+                            <li>Egg Wash: A beaten egg mixed with a little milk or water is used to brush on the croissant before baking.</li>
+                        </ol>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#crois-btn").click(function(){
+                                $("#crois").css({
+                                    display: 'flex'
+                                });
+                                $("#cupcke").hide();
+                                $("#bread").hide();
+                            });
+                        });
+                    </script>
+                </div>
+                <div id="cupcke" class="row container-fluid">
+                    <h1 class="display-2  text-center">Cupcakes</h1>
+                    <div class="col-sm-6 item"><!--vanilla-->
+                        <h1 class="display-6">Vanilla Cupcake</h1>
+                        <img src="./Images/menu/Cupcakes/vanilla.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 150 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr"><!--vanilla-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 1 ½ cups</li>
+                            <li>Baking Powder: 1 ½ teaspoons</li>
+                            <li>Salt: ¼ teaspoon</li>
+                            <li>Unsalted Butter: ½ cup (1 stick), softened</li>
+                            <li>Granulated Sugar: 1 cup</li>
+                            <li>Eggs: 2 large eggs</li>
+                            <li>Vanilla Extract: 2 teaspoons</li>
+                            <li>Milk: ½ cup.</li>
+                            <li>Optional: Sprinkles or other decorations for topping the cupcakes.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Chocolate-->
+                        <h1 class="display-6">Chocolate Cupcake</h1>
+                        <img src="./Images/menu/Cupcakes/chocolate.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 180 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Chocolate-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 1 ½ cups.</li>
+                            <li>Cocoa Powder: ⅓ cup (unsweetened).</li>
+                            <li>Baking Powder: 1 ½ teaspoons.</li>
+                            <li>Baking Soda: ½ teaspoon.</li>
+                            <li>Salt: ¼ teaspoon.</li>
+                            <li>Unsalted Butter: ½ cup (1 stick), softened.</li>
+                            <li>Granulated Sugar: 1 cup.</li>
+                            <li>Eggs: 2 large eggs.</li>
+                            <li>Vanilla Extract: 2 teaspoons.</li>
+                            <li>Milk: ½ cup.</li>
+                            <li>Hot Water: ½ cup.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Red Velvet-->
+                        <h1 class="display-6">Red Velvet Cupcake</h1>
+                        <img src="./Images/menu/Cupcakes/red.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 220 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---red velvet-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 1 ½ cups.</li>
+                            <li>Cocoa Powder: 2 tablespoons (unsweetened).</li>
+                            <li>Baking Powder: 1 teaspoon.</li>
+                            <li>Salt: ¼ teaspoon.</li>
+                            <li>Unsalted Butter: ½ cup (1 stick), softened.</li>
+                            <li>Granulated Sugar: 1 cup.</li>
+                            <li>Eggs: 2 large eggs.</li>
+                            <li>Vanilla Extract: 1 teaspoon.</li>
+                            <li>Buttermilk: ½ cup.</li>
+                            <li>Red Food Coloring: 2 tablespoons (liquid or gel).</li>
+                            <li>White Vinegar: 1 teaspoon.</li>
+                            <li>Baking Soda: ½ teaspoon.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Strawberry-->
+                        <h1 class="display-6">Strawberry cupcakes</h1>
+                        <img src="./Images/menu/Cupcakes/strawberry.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 300 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Strawberry-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 1 ½ cups.</li>
+                            <li>Baking Powder: 1 ½ teaspoons.</li>
+                            <li>Salt: ¼ teaspoon.</li>
+                            <li>Unsalted Butter: ½ cup (1 stick), softened.</li>
+                            <li>Granulated Sugar: 1 cup.</li>
+                            <li>Eggs: 2 large eggs.</li>
+                            <li>Vanilla Extract: 1 teaspoon.</li>
+                            <li>Milk: ½ cup.</li>
+                            <li>Fresh Strawberries: 1 cup, pureed or finely chopped.</li>
+                        </ol>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#cup-btn").click(function(){
+                                $("#cupcke").css({
+                                    display:'flex'
+                                });
+                                $("#crois").hide();
+                                $("#bread").hide();
+                            });
+                        });
+                    </script>
+                </div>
+                <div id="bread" class="row container-fluid">
+                    <h1 class="display-2  text-center">Breads</h1>
+                    <div class="col-sm-6 item"><!--Baguette-->
+                        <h1 class="display-6">Baguette</h1>
+                        <img src="./Images/menu/bread/Baguette.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 150 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr"><!--Baguette-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Bread Flour: 4 cups.</li>
+                            <li>Water: 2 cups.</li>
+                            <li>Active Dry Yeast: 2 teaspoons.</li>
+                            <li>Salt: 2 teaspoons.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Sourdough Bread-->
+                        <h1 class="display-6">Sourdough Bread</h1>
+                        <img src="./Images/menu/bread/Sourdough Bread.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 180 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Sourdough Bread-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: ½ cup.</li>
+                            <li>Water: ½ cup.</li>
+                            <li>Active Sourdough Starter: ¼ cup (also known as sourdough culture or sourdough mother).</li>
+                            <li>All-Purpose Flour: 3 cups.</li>
+                            <li>Water: 1 ½ cups.</li>
+                            <li>Salt: 2 teaspoons.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Whole Wheat Bread-->
+                        <h1 class="display-6">Whole Wheat Bread</h1>
+                        <img src="./Images/menu/bread/Whole Wheat Bread.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 220 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Whole Wheat Bread-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Whole Wheat Flour: 4 cups.</li>
+                            <li>Warm Water: 1 ½ cups.</li>
+                            <li>Honey or Maple Syrup: 2 tablespoons.</li>
+                            <li>Active Dry Yeast: 2 ¼ teaspoons.</li>
+                            <li>Salt: 2 teaspoons.</li>
+                            <li>Olive Oil or Vegetable Oil: 2 tablespoons.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Rye Bread-->
+                        <h1 class="display-6">Rye Bread</h1>
+                        <img src="./Images/menu/bread/Rye Bread.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 300 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Rye Bread-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Rye Flour: 3 cups.</li>
+                            <li>Bread Flour or All-Purpose Flour: 1 cup.</li>
+                            <li>Warm Water: 1 ½ cups.</li>
+                            <li>Active Dry Yeast: 2 ¼ teaspoons.</li>
+                            <li>Honey or Molasses: 2 tablespoons.</li>
+                            <li>Salt: 2 teaspoons.</li>
+                            <li>Caraway Seeds (optional): 2 teaspoons.</li>
+                            <li>Vegetable Oil or Olive Oil: 2 tablespoons.</li>
+                        </ol>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#brd-btn").click(function(){
+                                $("#bread").css({
+                                    display:'flex'
+                                });
+                                $("#crois").hide();
+                                $("#cupcke").hide();
+                            });
+                        });
+                    </script>
+                </div>
+                <div id="doughnuts" class="row container-fluid">
+                    <h1 class="display-2  text-center">Doughnuts</h1>
+                    <div class="col-sm-6 item"><!--Glazed Doughnut-->
+                        <h1 class="display-6">Glazed Doughnut</h1>
+                        <img src="./Images/menu/Doughnuts/Glazed Doughnut.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 150 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr"><!--Glazed Doughnut-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 2 ¾ cups.</li>
+                            <li>Granulated Sugar: ¼ cup.</li>
+                            <li>Active Dry Yeast: 2 ¼ teaspoons.</li>
+                            <li>Salt: ½ teaspoon.</li>
+                            <li>Milk: ¾ cup.</li>
+                            <li>Unsalted Butter: 3 tablespoons, melted.</li>
+                            <li>Egg: 1 large.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Chocolate Frosted Doughnut-->
+                        <h1 class="display-6">Chocolate Frosted Doughnut</h1>
+                        <img src="./Images/menu/Doughnuts/Chocolate Frosted Doughnut.jpg " alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 180 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Chocolate Frosted Doughnut-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 2 ¾ cups.</li>
+                            <li>Granulated Sugar: ¼ cup.</li>
+                            <li>Cocoa Powder: ¼ cup.</li>
+                            <li>Baking Powder: 2 teaspoons.</li>
+                            <li>Salt: ½ teaspoon.</li>
+                            <li>Milk: ¾ cup.</li>
+                            <li>Unsalted Butter: 3 tablespoons, melted.</li>
+                            <li>Egg: 1 large.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Jelly-Filled Doughnut-->
+                        <h1 class="display-6">Jelly-Filled Doughnut</h1>
+                        <img src="./Images/menu/Doughnuts/Jelly-Filled Doughnut.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 220 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Jelly-Filled Doughnut-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>Jelly-Filled Doughnut.</li>
+                            <li>Granulated Sugar: ¼ cup.</li>
+                            <li>Active Dry Yeast: 2 ¼ teaspoons.</li>
+                            <li>Salt: ½ teaspoon.</li>
+                            <li>Milk: ¾ cup.</li>
+                            <li>Unsalted Butter: 3 tablespoons, melted.</li>
+                            <li>Egg: 1 large.</li>
+                            <li>Vegetable Oil: For frying.</li>
+                            <li>Powdered Sugar: For dusting (optional).</li>
+                            <li>Jelly or Jam of your choice: Approximately ½ cup.</li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 item my-5"><!--Maple Bacon Doughnut-->
+                        <h1 class="display-6">Maple Bacon Doughnut</h1>
+                        <img src="./Images/menu/Doughnuts/Maple Bacon Doughnut.jpg" alt="...">
+                        <p class="mt-3 h5"><b>Price: </b> 300 pkr / 6 pcs</p>
+                    </div>
+                    <div class="col-sm-6 ingr my-5"><!---Maple Bacon Doughnut-->
+                        <h1 class="display-6">Ingredients</h1>
+                        <ol>
+                            <li>All-Purpose Flour: 2 ¾ cups.</li>
+                            <li>Granulated Sugar: ¼ cup.</li>
+                            <li>Active Dry Yeast: 2 ¼ teaspoons.</li>
+                            <li>Salt: ½ teaspoon.</li>
+                            <li>Milk: ¾ cup.</li>
+                            <li>Unsalted Butter: 3 tablespoons, melted.</li>
+                            <li>Egg: 1 large.</li>
+                            <li>Vegetable Oil: For frying.</li>
+                            <li>Powdered Sugar: 2 cups.</li>
+                            <li>Maple Extract or Maple Syrup: 2 tablespoons.</li>
+                            <li>Bacon: Cooked and crumbled, for topping.</li>
+                        </ol>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#dou-btn").click(function(){
+                                $("#doughnuts").css({
+                                    display:'flex'
+                                });
+                                $("#crois").hide();
+                                $("#cupcke").hide();
+                                $("#bread").hide();
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

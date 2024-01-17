@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Libraries/jQuery/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./Libraries/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./Libraries/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Libraries/font-awesome/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="shortcut icon" href="./Images/favicon.png" type="image/x-icon">
+    <script src="functions.js"></script>
+    <!---owl carrousel CSS---->
+    <link rel="stylesheet" href="./Libraries/owl carousel/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Libraries/owl carousel/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <!---owl Carrousel JS-->
+    <script src="./Libraries/owl carousel/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <!---owl carrousel-->
+    <title>Contact | Bakerz Bite</title>
+
+</head>
+<body>
+    
+
+    <!--Header----->
+    <header id="header" class="container-fluid">
+                <div id="navigation" >
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container">
+                            <div class="d-flex align-items-center">
+                                <div id="logo" class="navbar-brand">
+                                    <img src="./Images/logo.png" height="60px">
+                                </div>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#basicExampleNav"
+                                        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse collapse smooth-scroll justify-content-end" id="basicExampleNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item"><a href="About.html" class="nav-link">About Us</a></li>
+                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>                       
+                                    <li class="nav-item"><a href="index.html#merchandise" class="nav-link"><i class="fa fa-shirt"></i> Merchandise</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>   
+                </div>
+                <script>
+                    $(document).ready(function () {
+                    $('.dropdown-hover').hover(function () {
+                        $(this).addClass('show');
+                        $(this).find('.dropdown-menu').addClass('show');
+                    }, function () {
+                        $(this).removeClass('show');
+                        $(this).find('.dropdown-menu').removeClass('show');
+                    });
+                });
+                </script>
+    </header>
+
+    <!--Main section-->
+    <section id="main-cont" class="p-0 container-fluid">
+        <div class="row">
+            <div id="cont-img-main" class="col-md-6">
+                <img src="./Images/contact/main.jpg" alt="">
+            </div>
+            <div id="contact-form" class="col-md-6">
+                <div>
+                    <form>
+                        <table>
+                            <tr><!--heading-->
+                                <td colspan="2">
+                                    <h1 class="display-2">Contact Us</h1>
+                                </td>
+                            </tr>
+                            <tr><!--First two inputs-->
+                                <td>
+                                    <input type="text" placeholder="Full Name">
+                                    <input type="email" placeholder="Email Address">
+                                </td>
+                            </tr>
+                            <tr><!--Second two inputs-->
+                                <td>
+                                    <input type="tel" placeholder="Phone Number">
+                                    <input type="text" placeholder="Subject">
+                                </td>
+                            </tr>
+                            <tr><!--Message-->
+                                <td colspan="2">
+                                    <textarea rows="3" placeholder="Your Message"></textarea>
+                                </td>
+                            </tr>
+                            <tr><!--Submit Button-->
+                                <td style="text-align: right;" colspan="2">
+                                    <button id="sub-cont-btn" class="white">Submit</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Location-->
+    <section id="cont-sec-3" class="my-5 container-fluid py-5">
+        <div id="location">
+            <div id="loc-content" class="mx-5">
+                <h1 class="display-5 text-center">
+                    Come & Visit  our Bakeries in Pakistan
+                </h1>
+            </div>
+            <div id="loc-slider" class="owl-carousel container my-5">
+                <div class="row"><!--1st location-->
+                    <div class="col-md-5 loc-sld-content mx-0 p-5" >
+                        <div class="p-5">
+                            <h1 class="display-5 mb-5">Karachi, Sindh</h1>
+                            <p class="pt-5 pb-2 h5"><i class="fas fa-map-marker-alt"></i> 42-M, P.E.C.H.S. Dr. Mehmood Hussain Road, Karachi</p>
+                            <p class="h5 py-2"><i class="fas fa-phone"></i> (92) 214 535 042</p>
+                            <p class="h5 py-2"><i class="fas fa-envelope-open"></i> book@bakerzbite.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 mx-0 p-0">
+                        <img src="./Images/About/locations/loc 1.jpg" alt="...">
+                    </div>
+                </div>
+                <div class="row"><!--2nd location-->
+                    <div class="col-md-5 loc-sld-content mx-0 p-5" >
+                        <div class="p-5">
+                            <h1 class="display-5 mb-5">Karachi, Sindh</h1>
+                            <p class="pt-5 pb-2 h5"><i class="fas fa-map-marker-alt"></i> Al-Rehman Building I.I.Chundrigar Road, Karachi</p>
+                            <p class="h5 py-2"><i class="fas fa-phone"></i> (92) 216 989 615</p>
+                            <p class="h5 py-2"><i class="fas fa-envelope-open"></i> book@bakerzbite.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 mx-0 p-0">
+                        <img src="./Images/About/locations/loc 2.jpg" alt="...">
+                    </div>
+                </div>
+                <div class="row"><!--3rd location-->
+                    <div class="col-md-5  loc-sld-content mx-0 p-5" >
+                        <div class="p-5">
+                            <h1 class="display-5 mb-5">Peshawar, KPK</h1>
+                            <p class="pt-5 pb-2 h5"><i class="fas fa-map-marker-alt"></i> B-15, Spinzar Plaza, University Road, Peshawar</p>
+                            <p class="h5 py-2"><i class="fas fa-phone"></i> (92) 915 706 120</p>
+                            <p class="h5 py-2"><i class="fas fa-envelope-open"></i> book@bakerzbite.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7 mx-0 p-0">
+                        <img src="./Images/About/locations/loc 3.jpg" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#loc-slider').owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 10,
+                    nav: false,
+                    dots: false,
+                    responsive: {
+                        0:{
+                            items: 1
+                        },
+                        768: {
+                            items: 1
+                        },
+                        992: {
+                            items: 1
+                        }
+                    }
+                });
+                //
+                //ends
+
+            // Custom navigation
+            $('#location .slider-prev').click(function() {
+                $('#loc-slider').trigger('prev.owl.carousel');
+                });
+
+            $('#location .slider-next').click(function() {
+                $('#loc-slider').trigger('next.owl.carousel');
+                });
+            });
+        </script>
+    </section>
+
+    <!---FAQ's Section--->
+    <section id="faq" class="p-0 container-fluid p-5 my-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="display-4">
+                    Frequently Asked<br>Questions
+                </h1>
+                <a href="#contact-form"><button class="dark">Contact Us</button></a>
+            </div>
+            <div class="col-sm-6">
+                <div class="faq-cont"><!--first question-->
+                    <h3 id="hire">Are you currently hiring staff? <i class="fas fa-arrow-right"></i></h3>
+                    <div id="hire-cont" class="toggle-faq">
+                        <p>Yes, we are currently hiring restaurant staff! 
+                            We have open positions in various roles such 
+                            as servers, chefs, kitchen staff, and front-of-house
+                             staff. If you're interested in joining our team, 
+                             we encourage you to visit our website or reach out
+                              to us directly to learn more about the available 
+                              positions and how to apply. We look forward to 
+                              hearing from you!</p>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $('#hire').click(function(){
+                                $('#hire i').toggleClass('fa-arrow-right').toggleClass('fa-arrow-down');
+                                $('#hire-cont').slideToggle();
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="faq-cont"><!--second question-->
+                    <h3 id="pship">Is your restaurant open for partnerships? <i class="fas fa-arrow-right"></i></h3>
+                    <div id="pship-cont" class="toggle-faq">
+                        <p>Yes, we are open to partnerships! We believe
+                             in collaborating with like-minded businesses
+                              and individuals to create mutually beneficial
+                               relationships. If you have a partnership 
+                               proposal or idea you would like to discuss
+                               , we would be happy to hear from you.</p>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $('#pship').click(function(){
+                                $('#pship i').toggleClass('fa-arrow-right').toggleClass('fa-arrow-down');
+                                $('#pship-cont').slideToggle();
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="faq-cont"><!--third question-->
+                    <h3 id="mloc">Are you planning to open more locations? <i class="fas fa-arrow-right"></i></h3>
+                    <div id="mloc-cont" class="toggle-faq">
+                        <p>Yes, we are constantly exploring opportunities
+                             for expansion and growth. As a restaurant, 
+                             we are always looking for ways to bring our 
+                             culinary offerings to more locations and 
+                             reach a wider audience.</p>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $('#mloc').click(function(){
+                                $('#mloc i').toggleClass('fa-arrow-right').toggleClass('fa-arrow-down');
+                                $('#mloc-cont').slideToggle();
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="faq-cont"><!--fourth question-->
+                    <h3 id="ofood">Can I order online or through FoodPanda? <i class="fas fa-arrow-right"></i></h3>
+                    <div id="ofood-cont" class="toggle-faq">
+                        <p>es, you can definitely order from our 
+                            restaurant either directly or through
+                             Foodpanda! We offer the convenience 
+                             of multiple ordering options to ensure
+                              our customers can enjoy our delicious 
+                              food with ease. You can place an order
+                               directly with us by calling our 
+                               restaurant or visiting our website, 
+                               or you can choose to order through 
+                               the Foodpanda platform for a seamless 
+                               delivery experience. Whichever method 
+                               you prefer, we are here to satisfy your
+                                cravings and provide you with a 
+                                delightful dining experience. Bon appétit!</p>
+                    </div>
+                    <script>
+                        $(document).ready(function(){
+                            $('#ofood').click(function(){
+                                $('#ofood i').toggleClass('fa-arrow-right').toggleClass('fa-arrow-down');
+                                $('#ofood-cont').slideToggle();
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollPosition = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var elementPosition = $("#faq").offset().top;
+                if (scrollPosition>(elementPosition - windowHeight)) {
+                    $("#faq").addClass('slide');
+                }else{
+                    $("#faq").removeClass('slide');
+                }
+            });
+        });
+        </script>
+    </section>
+
+    <!---Cards section-->
+    <section id="cards" class="container-fluid">
+        <div class="row">
+            <div id="card-1" class="col-md-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <h4>Order Online</h4>
+                    <p><b>Call: </b><a href="tel: 923161234567">  (92) 316 123 4567 <i class="fa-solid fa-arrow-right"></i></a></p>
+                    <p><b>E-Mail: </b><a href="mailto: book@bakerzbite.com">  book@bakerzbite.com <i class="fa-solid fa-arrow-right"></i></a></p>
+                    <p><b>Form: </b><a href="#">  Reservate now <i class="fa-solid fa-arrow-right"></i></a></p>
+                </div>
+            </div>
+            <div id="card-1" class="col-md-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <h4>Locations</h4>
+                    <p>42-M, P.E.C.H.S. Dr. Mehmood Hussain Road, Karachi</p>
+                    <p>Al-Rehman Building I.I.Chundrigar Road, Karachi</p>
+                </div>
+            </div>
+            <div id="card-1" class="col-md-4 d-flex justify-content-center align-items-center">
+                <div>
+                    <h4>Open Hours</h4>
+                    <p><b>Mon-Fri: </b> 9 AM -  8 PM</p>
+                    <p><b>Saturday: </b>10 AM -  11 PM</p>
+                    <p><b>Sunday: </b>10 AM - 10 AM</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollPosition = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                var elementPosition = $("#cards").offset().top;
+                if (scrollPosition>(elementPosition - windowHeight)) {
+                    $("#cards").addClass('slide');
+                }else{
+                    $("#cards").removeClass('slide');
+                }
+            });
+        });
+        </script>
+    </section>
+
+    <!---Testimonials Section--->
+    <section id="sec-home-3" class="container-fluid p-0">
+        <div>
+            <div class="container">
+                <h1 class="display-4 text-bold text-center py-5">We believe and are dedicated<br>in delivering premium quality products.</h1>
+            </div>
+            <div id="review-slider" class="owl-carousel container">
+                <div class="review-card p-5 container"><!---1st review-->
+                    <div class="rev-name">
+                        <h3>John Smith</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"I had a fantastic experience with Bakerz Bite. The customer service was exceptional, and the food was absolutely delicious. 
+                            The menu offered a great variety of options, and everything I tried was fresh and flavorful. I highly recommend Bakerz Bite 
+                            for anyone looking for a satisfying and enjoyable dining experience."</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!---2nd review-->
+                    <div class="rev-name">
+                        <h3>Sarah Johnson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star blank"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"Bakerz Bite is a hidden gem! The atmosphere is cozy and inviting, and the staff is friendly and attentive.
+                             The menu has a good selection of both vegetarian and non-vegetarian dishes. I particularly loved their signature dish.
+                              The only reason I didn't give it 5 stars is because the portion sizes were a bit small for the price."</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!--3rd review-->
+                    <div class="rev-name">
+                        <h3>David Thompson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"Bakerz Bite exceeded my expectations. The food was absolutely delicious, and the presentation
+                             was top-notch. The staff was knowledgeable and provided excellent recommendations. The prices were 
+                             reasonable for the quality of food and service. I will definitely be returning to Bakerz Bite and recommending
+                              it to my friends and family"</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!---4th review-->
+                    <div class="rev-name">
+                        <h3>Emily Wilson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star blank"></i>
+                        <i title="excellent" class="fas fa-star blank"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"My experience at Bakerz Bite was average. While the food tasted good, the service
+                             was slow and the staff seemed overwhelmed. The prices were a bit high considering the portion 
+                             sizes. However, the ambiance of the restaurant was pleasant, and the menu had a decent variety
+                              of options. It's an okay place to dine if you're not in a rush."</i></p>
+                    </div>
+                </div>
+                <div class="review-card p-5 container"><!---fifth review-->
+                    <div class="rev-name">
+                        <h3>Michael Anderson</h3>
+                    </div>
+                    <div class="ratings">
+                        <i title="worst" class="fas fa-star"></i>
+                        <i title="better" class="fas fa-star"></i>
+                        <i title="good" class="fas fa-star"></i>
+                        <i title="nice" class="fas fa-star"></i>
+                        <i title="excellent" class="fas fa-star"></i>
+                    </div>
+                    <div class="rev">
+                        <p><i>"Bakerz Bite is my go-to place for a quick and delicious meal. 
+                            The menu is diverse, offering something for everyone. The staff is friendly 
+                            and efficient, and the food is always fresh and flavorful. I've never been disappointed
+                             with my experience at Bakerz Bite, and I highly recommend it to anyone looking for
+                              great food and excellent service."</i></p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls display-6 text-center my-3 py-5">
+                <button style="color: #0D0D0D;" class="slider-prev"><i class="fas fa-arrow-left"></i></button>
+                <button style="color: #0D0D0D;" class="slider-next"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#review-slider').owlCarousel({
+                    items: 2,
+                    loop: true,
+                    margin: 10,
+                    nav: false,
+                    dots: false,
+                    responsive: {
+                        0:{
+                            items: 1
+                        },
+                        768: {
+                            items: 1
+                        },
+                        992: {
+                            items: 2
+                        }
+                    }
+                });
+                //
+                //ends
+
+            // Custom navigation
+            $('#sec-home-3 .slider-prev').click(function() {
+                $('#review-slider').trigger('prev.owl.carousel');
+                });
+
+            $('#sec-home-3 .slider-next').click(function() {
+                $('#review-slider').trigger('next.owl.carousel');
+                });
+            });
+        </script>
+    </section>
+
+    <!--footer-->
+    <footer class="container p-5 my-5">
+        <div class="row text-center">
+            <p class="h2">
+                <i class="fa fa-copyright"></i> Copyright 2023 | All rights reserved
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!---back to top button-->
+    <div id="back-to-top"><i class="fa-solid fa-arrow-up"></i>
+        <script>
+            //
+        //back to top
+        //
+        $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+            $('#back-to-top').fadeIn();
+            } else {
+            $('#back-to-top').fadeOut();
+            }
+        });
+        
+        $('#back-to-top').click(function() {
+            $('html, body').animate({ scrollTop: 0 }, 500);
+        });
+        });
+        </script>
+    </div>
+</body>
+</html>
